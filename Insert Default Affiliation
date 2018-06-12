@@ -1,5 +1,5 @@
 (function executeRule(current, previous /*null when async*/) {
-
+	//Added comment for understanding concept
 	var locationId = current.u_location.toString();
 	var glideAffiliations = new GlideRecord('x_wdtpa_wdpr_estp_m2m_affiliations_x_locations');
 			glideAffiliations.addQuery('u_location',locationId);
@@ -9,3 +9,4 @@
 		current.u_default = true;
 	}
 })(current, previous);
+
