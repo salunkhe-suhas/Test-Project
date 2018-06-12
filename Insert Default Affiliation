@@ -1,0 +1,11 @@
+(function executeRule(current, previous /*null when async*/) {
+
+	var locationId = current.u_location.toString();
+	var glideAffiliations = new GlideRecord('x_wdtpa_wdpr_estp_m2m_affiliations_x_locations');
+			glideAffiliations.addQuery('u_location',locationId);
+			glideAffiliations.query();
+	
+	if (!glideAffiliations.next()){
+		current.u_default = true;
+	}
+})(current, previous);
